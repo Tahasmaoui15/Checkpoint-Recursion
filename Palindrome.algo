@@ -1,0 +1,14 @@
+FUNCTION is_Palindrome(word:STRING , i=0, j=word.length-1) : BOOLEAN
+VAR
+    isPalindrome: BOOLEAN;
+
+BEGIN
+    IF (word[i]<>word[j]) THEN
+        return (FALSE)
+    ELSE_IF(i < j) THEN
+        IF (word[i] == word [j]) THEN
+            is_Palindrome(word,i++,j--)
+        END_IF
+    END_IF
+    RETURN isPalindrome = TRUE;
+END
